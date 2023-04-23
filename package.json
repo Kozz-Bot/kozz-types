@@ -1,0 +1,10 @@
+{
+  "name": "kozz-types",
+  "version": "0.0.1",
+  "description": "Types for the Kozz bot protocol",
+  "main": "index.js",
+  "repository": "git@github.com:Kozz-Bot/kozz-types.git",
+  "author": "TramontaG",
+  "license": "MIT",
+  "private": false
+}
