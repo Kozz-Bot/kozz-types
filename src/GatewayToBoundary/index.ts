@@ -1,4 +1,4 @@
-import { Media } from 'src/Common';
+import { Media } from '../Common';
 
 export type SendMessagePayload = {
 	quoteId?: string;

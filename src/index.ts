@@ -1,2 +1,4 @@
 export * from './BondaryToGateway';
-export * from './GatewatToBoundary';
+export * from './GatewayToBoundary';
+
+console.log('hey');

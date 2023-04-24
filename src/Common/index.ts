@@ -8,9 +8,3 @@ export type Media = {
 export type ContactID = string;
 
 type Base64 = string;
-
-export type MessageID = {
-	fromHostAccount: boolean;
-	remote: ContactID;
-	id: string;
-};

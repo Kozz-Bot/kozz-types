@@ -2,13 +2,13 @@
 	"name": "kozz-types",
 	"version": "0.0.1",
 	"description": "Types for the Kozz bot protocol",
-	"main": "/dist",
+	"main": "./dist",
 	"repository": "git@github.com:Kozz-Bot/kozz-types.git",
 	"author": "TramontaG",
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"dev": "tsc && link-module-alias && concurrently \"tsc --watch\" \"nodemon dist/index.js\" || concurrently \"tsc --watch\" \"nodemon dist/index.js\"",
+		"dev": "tsc && link-module-alias && concurrently \"tsc --watch\" \"nodemon dist/index.js\"",
 		"start": "tsc && link-module-alias && node dist/index.js",
 		"test": "jest",
 		"docs": "typedoc ./src/index.ts"

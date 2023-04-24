@@ -1,4 +1,4 @@
-import { ContactID, Media, MessageID } from 'src/Common';
+import { ContactID, Media } from '../Common';
 
 export type MessageReceived = {
 	platform: 'WA';
@@ -6,7 +6,8 @@ export type MessageReceived = {
 	from: ContactID;
 	body: string;
 	to: ContactID;
-	id: MessageID;
+	id: string;
+	fromHostAccount: boolean;
 	groupName?: string;
 	media?: Media;
 };
