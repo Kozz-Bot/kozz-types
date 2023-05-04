@@ -7,4 +7,5 @@ export type SendMessagePayload = {
 	media?: Media;
 	platform: 'WA';
 	timestamp: number;
+	boundaryId: string;
 };
