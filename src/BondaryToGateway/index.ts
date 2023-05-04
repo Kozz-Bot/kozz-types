@@ -1,3 +1,5 @@
+export * from './instance';
+
 import { ContactID, Media } from '../Common';
 
 export type MessageReceived = {

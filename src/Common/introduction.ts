@@ -1,4 +1,4 @@
-export type BoundaryIdentifier = 'boudary';
+export type BoundaryIdentifier = 'boundary';
 export type HandlerIdentifier = 'handler';
 
 export type Role = BoundaryIdentifier | HandlerIdentifier;
@@ -11,6 +11,7 @@ export type BoundaryIntroduction = {
 	platform: Platform;
 	OS: NodeJS.Platform;
 	timestamp: number;
+	id?: string;
 };
 
 export type HandlerIntroduction = {
