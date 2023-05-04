@@ -1,3 +1,5 @@
+export * from './introduction';
+
 export type Media = {
 	data: Base64;
 	fileName: string | null;
