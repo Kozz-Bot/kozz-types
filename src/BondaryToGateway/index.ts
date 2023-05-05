@@ -12,4 +12,6 @@ export type MessageReceived = {
 	fromHostAccount: boolean;
 	groupName?: string;
 	media?: Media;
+	boundaryId: string;
+	quotedMessage: MessageReceived | undefined;
 };
