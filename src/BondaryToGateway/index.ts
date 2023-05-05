@@ -1,6 +1,6 @@
 export * from './instance';
 
-import { ContactID, Media } from '../Common';
+import { ContactID, ContactPayload, Media } from '../Common';
 
 export type MessageReceived = {
 	platform: 'WA';
@@ -14,4 +14,5 @@ export type MessageReceived = {
 	media?: Media;
 	boundaryId: string;
 	quotedMessage: MessageReceived | undefined;
+	contact: ContactPayload;
 };
