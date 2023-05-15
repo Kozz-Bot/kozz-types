@@ -1,4 +1,4 @@
-import { Media, Platform } from '../Common';
+import { ContactPayload, Media, Platform } from '../Common';
 
 export type SendMessagePayload = {
 	quoteId?: string;
@@ -8,6 +8,7 @@ export type SendMessagePayload = {
 	platform: Platform;
 	timestamp: number;
 	boundaryId: string;
+	contact: ContactPayload;
 };
 
 export type ReactToMessagePayload = {
@@ -18,4 +19,16 @@ export type ReactToMessagePayload = {
 	platform: Platform;
 	timestamp: number;
 	boundaryId: string;
+	contact: ContactPayload;
+};
+
+export type SendMediaPayload = {
+	quoteId?: string;
+	chatId: string;
+	body: string;
+	media?: Media;
+	platform: Platform;
+	timestamp: number;
+	boundaryId: string;
+	contact: ContactPayload;
 };

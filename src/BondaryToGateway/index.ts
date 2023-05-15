@@ -2,6 +2,15 @@ export * from './instance';
 
 import { ContactID, ContactPayload, Media } from '../Common';
 
+export type MessageType =
+	| 'STICKER'
+	| 'TEXT'
+	| 'VIDEO'
+	| 'IMAGE'
+	| 'AUDIO'
+	| 'SONG'
+	| 'OTHER';
+
 export type MessageReceived = {
 	platform: 'WA';
 	timestamp: number;
@@ -15,4 +24,6 @@ export type MessageReceived = {
 	boundaryId: string;
 	quotedMessage: MessageReceived | undefined;
 	contact: ContactPayload;
+	messageType: MessageType;
+	isViewOnce: boolean;
 };
