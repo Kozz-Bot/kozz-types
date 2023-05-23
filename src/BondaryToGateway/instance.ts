@@ -4,4 +4,5 @@ import { BoundaryIntroduction } from '..';
 export type BoundaryInstance = BoundaryIntroduction & {
 	id: string;
 	socket: Socket;
+	signature: string;
 };
