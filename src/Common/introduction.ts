@@ -12,6 +12,7 @@ export type BoundaryIntroduction = {
 	OS: NodeJS.Platform;
 	timestamp: number;
 	id?: string;
+	signature: string;
 };
 
 export type HandlerIntroduction = {
@@ -19,6 +20,7 @@ export type HandlerIntroduction = {
 	name: string;
 	methods: string[];
 	timestamp: number;
+	signature: string;
 };
 
 export type Introduction = BoundaryIntroduction | HandlerIntroduction;
