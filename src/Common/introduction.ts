@@ -24,3 +24,8 @@ export type HandlerIntroduction = {
 };
 
 export type Introduction = BoundaryIntroduction | HandlerIntroduction;
+
+export type SignaturelessPayload<Payload extends Introduction> = Omit<
+	Payload,
+	'signature'
+>;

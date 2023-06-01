@@ -1,4 +1,5 @@
 export * from './introduction';
+export * from './proxy';
 
 export type Media = {
 	data: Base64;
@@ -8,6 +9,8 @@ export type Media = {
 };
 
 export type ContactID = string;
+export type BoundaryID = string;
+export type ChatID = string;
 
 export type ContactPayload = {
 	/**
