@@ -27,6 +27,10 @@ export type ContactPayload = {
 	 * If the host account has added the contact
 	 */
 	hostAdded: boolean;
+	/**
+	 * If the contact is a group or a single person
+	 */
+	isGroup: boolean;
 };
 
 type Base64 = string;
