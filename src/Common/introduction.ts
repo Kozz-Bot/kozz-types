@@ -10,7 +10,6 @@ export type BoundaryIntroduction = {
 	role: BoundaryIdentifier;
 	platform: Platform;
 	OS: NodeJS.Platform;
-	timestamp: number;
 	id?: string;
 	signature: string;
 };
@@ -19,7 +18,6 @@ export type HandlerIntroduction = {
 	role: HandlerIdentifier;
 	name: string;
 	methods: string[];
-	timestamp: number;
 	signature: string;
 };
 
