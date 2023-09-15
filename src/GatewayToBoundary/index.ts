@@ -12,14 +12,9 @@ export type SendMessagePayload = {
 };
 
 export type ReactToMessagePayload = {
-	messageBody: string;
 	messageId: string;
-	chatId: string;
 	emote: string;
-	platform: Platform;
-	timestamp: number;
 	boundaryId: string;
-	contact: ContactPayload;
 };
 
 export type SendMediaPayload = {
@@ -31,4 +26,14 @@ export type SendMediaPayload = {
 	timestamp: number;
 	boundaryId: string;
 	contact: ContactPayload;
+};
+
+export type EditMessagePayload = {
+	messageId: string;
+	boundaryId: string;
+	newContent: {
+		body: string;
+		media?: Media;
+		quotedMessageId?: string;
+	};
 };

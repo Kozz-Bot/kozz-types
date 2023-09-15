@@ -1,11 +1,14 @@
 export * from './introduction';
 export * from './proxy';
 
+export type MediaTransportType = 'b64' | 'url';
+
 export type Media = {
 	data: Base64;
 	fileName: string | null;
 	sizeInBytes: number | null;
 	mimeType: string;
+	transportType: MediaTransportType;
 };
 
 export type ContactID = string;
