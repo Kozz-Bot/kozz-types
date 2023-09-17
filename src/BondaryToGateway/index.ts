@@ -26,4 +26,5 @@ export type MessageReceived = {
 	contact: ContactPayload;
 	messageType: MessageType;
 	isViewOnce: boolean;
+	taggedContacts: ContactPayload[];
 };
