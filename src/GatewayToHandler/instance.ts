@@ -9,6 +9,7 @@ export type EventListener = {
 
 export type HandlerInstance = HandlerIntroduction & {
 	id: string;
+	name: string;
 	socket: Socket;
 	listeners: EventListener[];
 };

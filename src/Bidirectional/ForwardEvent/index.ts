@@ -6,3 +6,9 @@ export type ForwardEventPayload = {
 	};
 	eventName: string;
 };
+
+export type ForwardedEventPayload = {
+	source: string;
+	eventName: string;
+	payload: any;
+};

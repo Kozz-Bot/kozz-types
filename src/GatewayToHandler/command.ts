@@ -6,6 +6,7 @@ export type Command = {
 	namedArgs: Record<string, string | number | boolean> | null;
 	message: MessageReceived;
 	boundaryId: string;
+	boundaryName: string;
 	query: string;
 	taggedContacts: ContactPayload[];
 };

@@ -13,7 +13,7 @@ export type MessageType =
 
 export type MessageReceived = {
 	platform: 'WA';
-	timestamp: number;
+	timestamp: number | undefined;
 	from: ContactID;
 	body: string;
 	to: ContactID;
@@ -21,10 +21,15 @@ export type MessageReceived = {
 	fromHostAccount: boolean;
 	groupName?: string;
 	media?: Media;
-	boundaryId: string;
+	boundaryName: string;
 	quotedMessage: MessageReceived | undefined;
 	contact: ContactPayload;
 	messageType: MessageType;
 	isViewOnce: boolean;
 	taggedContacts: ContactPayload[];
+};
+
+export type MessageReceivedByGateway = MessageReceived & {
+	boundaryId: string;
+	timestamp: number;
 };
