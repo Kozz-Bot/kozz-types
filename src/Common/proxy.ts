@@ -1,7 +1,7 @@
 import { BoundaryID, ChatID } from '.';
 
-export type Source = `${BoundaryID}/*` | `${BoundaryID}/${ChatID}`;
-export type Destination = BoundaryID | BoundaryID[];
+export type Source = `${string}/*` | `${string}/${string}`;
+export type Destination = string;
 
 export type UnidirectionalProxyRequestPayload = {
 	source: Source;
@@ -13,6 +13,7 @@ export type BidirectionalProxyRequestPayload = {
 	source: Source;
 	destination: Destination;
 	bidirectional: true;
+	keepAlive?: boolean;
 	replyDirection: UnidirectionalProxyRequestPayload;
 };
 

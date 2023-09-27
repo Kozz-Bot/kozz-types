@@ -5,3 +5,4 @@ src
 crude_install.sh
 jest.config.ts
 yarn.lock
+.npmrc

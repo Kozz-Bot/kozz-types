@@ -8,9 +8,9 @@ export type Platform = 'WA';
 
 export type BoundaryIntroduction = {
 	role: BoundaryIdentifier;
+	name: string;
 	platform: Platform;
 	OS: NodeJS.Platform;
-	id?: string;
 	signature: string;
 };
 

@@ -1,4 +1,5 @@
 export * from './instance';
+export * from './ForwardableEvents';
 
 import { ContactID, ContactPayload, Media } from '../Common';
 
