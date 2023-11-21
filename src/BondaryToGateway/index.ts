@@ -34,3 +34,17 @@ export type MessageReceivedByGateway = MessageReceived & {
 	boundaryId: string;
 	timestamp: number;
 };
+
+export type ChatData = PrivateChatData | GroupChatData;
+
+export type PrivateChatData = ContactPayload & {
+	isGroup: false;
+}
+
+export type GroupChatData = {
+	isGroup: true;
+	id: string,
+	description: string,
+	adminList: ContactPayload[],
+	membersList: ContactPayload[],
+}
