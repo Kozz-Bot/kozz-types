@@ -43,6 +43,7 @@ export type PrivateChatData = ContactPayload & {
 
 export type GroupChatData = {
 	isGroup: true;
+	name: string;
 	id: string,
 	description: string,
 	adminList: ContactPayload[],
