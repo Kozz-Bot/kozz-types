@@ -1,5 +1,8 @@
 import { ContactPayload, Media, Platform } from '../Common';
 
+/**
+ * [TODO]: Find a way to tag people
+ */
 export type SendMessagePayload = {
 	quoteId?: string;
 	chatId: string;

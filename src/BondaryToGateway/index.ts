@@ -1,7 +1,7 @@
 export * from './instance';
 export * from './ForwardableEvents';
 
-import { ContactID, ContactPayload, Media } from '../Common';
+import { ContactID, ContactPayload, Media, Platform } from '../Common';
 
 export type MessageType =
 	| 'STICKER'
@@ -9,14 +9,24 @@ export type MessageType =
 	| 'VIDEO'
 	| 'IMAGE'
 	| 'AUDIO'
-	| 'SONG'
 	| 'OTHER';
 
 export type MessageReceived = {
-	platform: 'WA';
+	platform: Platform;
 	timestamp: number | undefined;
 	from: ContactID;
+	/**
+	 * Body in its raw form
+	 */
 	body: string;
+	/**
+	 * Sanitized to remove accents and uppercase, useful to compare with other strings
+	 */
+	santizedBody: string;
+	/**
+	 * Unsanitized body but with tagged contact ids replaced with 
+	 */
+	taggedConctactFriendlyBody: string;
 	to: ContactID;
 	id: string;
 	fromHostAccount: boolean;
