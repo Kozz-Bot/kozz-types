@@ -3,13 +3,7 @@ export * from './ForwardableEvents';
 
 import { ContactID, ContactPayload, Media, Platform } from '../Common';
 
-export type MessageType =
-	| 'STICKER'
-	| 'TEXT'
-	| 'VIDEO'
-	| 'IMAGE'
-	| 'AUDIO'
-	| 'OTHER';
+export type MessageType = 'STICKER' | 'TEXT' | 'VIDEO' | 'IMAGE' | 'AUDIO' | 'OTHER';
 
 export type MessageReceived = {
 	platform: Platform;
@@ -24,7 +18,7 @@ export type MessageReceived = {
 	 */
 	santizedBody: string;
 	/**
-	 * Unsanitized body but with tagged contact ids replaced with 
+	 * Unsanitized body but with tagged contact ids replaced with
 	 */
 	taggedConctactFriendlyBody: string;
 	to: ContactID;
@@ -43,19 +37,20 @@ export type MessageReceived = {
 export type MessageReceivedByGateway = MessageReceived & {
 	boundaryId: string;
 	timestamp: number;
+	quotedMessage: MessageReceivedByGateway | undefined;
 };
 
 export type ChatData = PrivateChatData | GroupChatData;
 
 export type PrivateChatData = ContactPayload & {
 	isGroup: false;
-}
+};
 
 export type GroupChatData = {
 	isGroup: true;
 	name: string;
-	id: string,
-	description: string,
-	adminList: ContactPayload[],
-	membersList: ContactPayload[],
-}
+	id: string;
+	description: string;
+	adminList: ContactPayload[];
+	membersList: ContactPayload[];
+};
