@@ -11,6 +11,7 @@ export type Media = {
 	duration: number | null;
 	mimeType: string;
 	transportType: MediaTransportType;
+	stickerTags: string[] | undefined;
 };
 
 export type ContactID = string;
