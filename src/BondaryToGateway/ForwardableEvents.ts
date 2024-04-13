@@ -1,16 +1,23 @@
 import { ChatID, ContactPayload, SendMessagePayload } from '..';
 
-export type UserJoinedGroupChat = {
+export type ForwardableUserJoinedGroup = {
+	whoAdded: ContactPayload | undefined;
+	membersAdded: ContactPayload[];
+	chatId: ChatID;
+};
+
+export type ForwardableUserLeftGroup = {
 	contact: ContactPayload;
 	chatId: ChatID;
 };
 
-export type UserLeftGroupChat = {
+export type ForwardableUserKickedFromGroup = {
 	contact: ContactPayload;
+	whoKicked: ContactPayload;
 	chatId: ChatID;
 };
 
-export type HostTagged = {
+export type ForwadableUserMentioned = {
 	contact: ContactPayload;
 	chatId: ChatID;
 	message: SendMessagePayload;
