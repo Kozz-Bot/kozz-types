@@ -43,3 +43,16 @@ export type ContactPayload = {
 };
 
 type Base64 = string;
+
+export type GroupChat = {
+	id: string;
+	owner: string;
+	name: string;
+	memberCount: number;
+	description: string;
+	community: string | null;
+	participants: {
+		id: string;
+		admin: boolean;
+	}[];
+};
