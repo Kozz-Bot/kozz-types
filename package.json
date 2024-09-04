@@ -1,6 +1,6 @@
 {
 	"name": "kozz-types",
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"description": "Types for the Kozz bot protocol",
 	"main": "./dist",
 	"repository": "git@github.com:Kozz-Bot/kozz-types.git",
