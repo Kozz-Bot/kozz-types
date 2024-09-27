@@ -8,6 +8,7 @@ export type Media = {
 	data: Base64;
 	fileName: string | null;
 	sizeInBytes: number | null;
+	duration: number | null;
 	mimeType: string;
 	transportType: MediaTransportType;
 	stickerTags: string[] | undefined;
