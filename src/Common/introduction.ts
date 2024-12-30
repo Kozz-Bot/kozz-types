@@ -4,7 +4,7 @@ export type HandlerIdentifier = 'handler';
 export type Role = BoundaryIdentifier | HandlerIdentifier;
 
 // [TODO]: Add support for other platforms
-export type Platform = 'WA';
+export type Platform = 'WWebJS' | 'Baileys' | 'other';
 
 export type BoundaryIntroduction = {
 	role: BoundaryIdentifier;
