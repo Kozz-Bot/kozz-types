@@ -56,4 +56,5 @@ export type GroupChat = {
 		id: string;
 		admin: boolean;
 	}[];
+	unreadCount: number;
 };

@@ -1,5 +1,5 @@
-import { MessageType } from 'src/BondaryToGateway';
-import { Media } from 'src/Common';
+import { MessageType } from '../../BondaryToGateway';
+import { Media } from '../../Common';
 
 export type NewMessage =
 	| {
