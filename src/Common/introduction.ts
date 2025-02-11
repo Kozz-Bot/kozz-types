@@ -21,7 +21,15 @@ export type HandlerIntroduction = {
 	signature: string;
 };
 
-export type Introduction = BoundaryIntroduction | HandlerIntroduction;
+export type DashboardSignature = {
+	role: 'Dashboard';
+	key: string;
+};
+
+export type Introduction =
+	| BoundaryIntroduction
+	| HandlerIntroduction
+	| DashboardSignature;
 
 export type SignaturelessPayload<Payload extends Introduction> = Omit<
 	Payload,

@@ -32,6 +32,7 @@ export type MessageReceived = {
 	messageType: MessageType;
 	isViewOnce: boolean;
 	taggedContacts: ContactPayload[];
+	chatId: string;
 };
 
 export type MessageReceivedByGateway = MessageReceived & {
@@ -44,6 +45,8 @@ export type ChatData = PrivateChatData | GroupChatData;
 
 export type PrivateChatData = ContactPayload & {
 	isGroup: false;
+	unreadCount: number;
+	lastUnreadTimestamp: number;
 };
 
 export type GroupChatData = {
@@ -53,4 +56,6 @@ export type GroupChatData = {
 	description: string;
 	adminList: ContactPayload[];
 	membersList: ContactPayload[];
+	unreadCount: number;
+	lastUnreadTimestamp: number;
 };
