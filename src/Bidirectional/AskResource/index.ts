@@ -1,4 +1,4 @@
-export type Entity = 'Boundary' | 'Handler' | 'Gateway';
+export type EntityType = 'Boundary' | 'Handler' | 'Gateway';
 
 export type AskResourcePayload = {
 	/**
@@ -6,7 +6,7 @@ export type AskResourcePayload = {
 	 */
 	requester: {
 		id: string;
-		type: Entity;
+		type: EntityType;
 	};
 	/**
 	 * The boundary or handler that should responde with the
@@ -14,7 +14,7 @@ export type AskResourcePayload = {
 	 */
 	responder: {
 		id: string;
-		type: Entity;
+		type: EntityType;
 	};
 
 	request: {
@@ -29,12 +29,12 @@ export type AskResourcePayload = {
 export type ProvideResourcePayload = {
 	responder: {
 		id: string;
-		type: Entity;
+		type: EntityType;
 	};
 
 	requester: {
 		id: string;
-		type: Entity;
+		type: EntityType;
 	};
 
 	request: {

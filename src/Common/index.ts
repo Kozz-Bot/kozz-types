@@ -1,6 +1,7 @@
 export * from './introduction';
 export * from './proxy';
 export * from './deleteMessage';
+export * from './Entities';
 
 export type MediaTransportType = 'b64' | 'url';
 
