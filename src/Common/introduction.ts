@@ -14,10 +14,23 @@ export type BoundaryIntroduction = {
 	signature: string;
 };
 
+export type CommandAliasTarget = {
+	module?: string;
+	method?: string;
+	immediateArg?: string | null;
+	namedArgs?: Record<string, string | number | boolean>;
+};
+
+export type CommandAlias = {
+	name: string;
+	target: CommandAliasTarget;
+};
+
 export type HandlerIntroduction = {
 	role: HandlerIdentifier;
 	name: string;
 	methods: string[];
+	aliases?: CommandAlias[];
 	signature: string;
 };
 
