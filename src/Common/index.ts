@@ -44,6 +44,11 @@ export type ContactPayload = {
 	isHostAccount: boolean;
 };
 
+export type PrivateChatSummary = {
+	id: ChatID;
+	name: string;
+};
+
 type Base64 = string;
 
 export type GroupChat = {
