@@ -1,4 +1,3 @@
-import { type Socket } from 'socket.io';
 import { HandlerIntroduction } from '..';
 
 export type EventListener = {
@@ -7,9 +6,15 @@ export type EventListener = {
 	eventName: string;
 };
 
+export type SocketLike = {
+	id: string;
+	emit: (event: string, ...args: any[]) => boolean;
+	[key: string]: any;
+};
+
 export type HandlerInstance = HandlerIntroduction & {
 	id: string;
 	name: string;
-	socket: Socket;
+	socket: SocketLike;
 	listeners: EventListener[];
 };

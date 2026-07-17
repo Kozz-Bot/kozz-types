@@ -1,26 +1,39 @@
-import { BoundaryID, ChatID } from '.';
+import { ChatID } from '.';
 
-export type Source = `${string}/*` | `${string}/${string}`;
-export type Destination = string;
-
-export type UnidirectionalProxyRequestPayload = {
-	source: Source;
-	destination: Destination;
-	bidirectional?: false;
+export type ProxySource = {
+	boundary: string;
+	chats: '*' | ChatID[];
 };
 
-export type BidirectionalProxyRequestPayload = {
-	source: Source;
-	destination: Destination;
-	bidirectional: true;
-	keepAlive?: boolean;
-	replyDirection: UnidirectionalProxyRequestPayload;
+export type ProxyRequestPayload = {
+	source: ProxySource;
+	subscriber?: string;
 };
 
-export type ProxyRequestPayload =
-	| UnidirectionalProxyRequestPayload
-	| BidirectionalProxyRequestPayload;
+export type ProxyRevokePayload =
+	| {
+			subscriptionId: string;
+	  }
+	| {
+			subscriber?: string;
+			source?: {
+				boundary: string;
+				chats?: '*' | ChatID[];
+			};
+	  };
 
-export type ProxyRevokePayload = {
-	source: Source;
+export type ProxySubscriptionStatus =
+	| 'active'
+	| 'pending_boundary'
+	| 'pending_subscriber';
+
+export type ProxySubscription = {
+	id: string;
+	requestedBy: string;
+	subscriber: string;
+	source: ProxySource;
+	status: ProxySubscriptionStatus;
+	createdAt: number;
+	updatedAt: number;
+	expiresAt?: number;
 };

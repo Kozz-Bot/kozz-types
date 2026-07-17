@@ -1,10 +1,9 @@
-import { type Socket } from 'socket.io';
-import { BoundaryIntroduction, EventListener } from '..';
+import { BoundaryIntroduction, EventListener, SocketLike } from '..';
 
 export type BoundaryInstance = BoundaryIntroduction & {
 	id: string;
 	name: string;
-	socket: Socket;
+	socket: SocketLike;
 	signature: string;
 	listeners: EventListener[];
 };
