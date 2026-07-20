@@ -37,6 +37,7 @@ export type MessageReceived = {
 
 export type MessageReceivedByGateway = MessageReceived & {
 	boundaryId: string;
+	namespace: string;
 	timestamp: number;
 	quotedMessage: MessageReceivedByGateway | undefined;
 };

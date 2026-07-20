@@ -13,6 +13,7 @@ export type Command = {
 	message: MessageReceivedByGateway;
 	boundaryId: string;
 	boundaryName: string;
+	namespace: string;
 	query: string;
 	taggedContacts: ContactPayload[];
 };

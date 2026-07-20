@@ -7,6 +7,7 @@ export type AskResourcePayload = {
 	requester: {
 		id: string;
 		type: EntityType;
+		namespace?: string;
 	};
 	/**
 	 * The boundary or handler that should responde with the
@@ -15,6 +16,7 @@ export type AskResourcePayload = {
 	responder: {
 		id: string;
 		type: EntityType;
+		namespace?: string;
 	};
 
 	request: {
@@ -30,11 +32,13 @@ export type ProvideResourcePayload = {
 	responder: {
 		id: string;
 		type: EntityType;
+		namespace?: string;
 	};
 
 	requester: {
 		id: string;
 		type: EntityType;
+		namespace?: string;
 	};
 
 	request: {

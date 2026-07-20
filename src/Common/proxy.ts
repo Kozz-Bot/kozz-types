@@ -29,6 +29,7 @@ export type ProxySubscriptionStatus =
 
 export type ProxySubscription = {
 	id: string;
+	namespace: string;
 	requestedBy: string;
 	subscriber: string;
 	source: ProxySource;

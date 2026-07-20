@@ -2,6 +2,9 @@ export type BoundaryIdentifier = 'boundary';
 export type HandlerIdentifier = 'handler';
 
 export type Role = BoundaryIdentifier | HandlerIdentifier;
+export const DEFAULT_NAMESPACE = 'default';
+
+export type Namespace = string;
 
 // [TODO]: Add support for other platforms
 export type Platform = 'WWebJS' | 'Baileys' | 'other';
@@ -9,6 +12,7 @@ export type Platform = 'WWebJS' | 'Baileys' | 'other';
 export type BoundaryIntroduction = {
 	role: BoundaryIdentifier;
 	name: string;
+	namespace?: Namespace;
 	platform: Platform;
 	OS: NodeJS.Platform;
 	signature: string;
@@ -29,6 +33,7 @@ export type CommandAlias = {
 export type HandlerIntroduction = {
 	role: HandlerIdentifier;
 	name: string;
+	namespace?: Namespace;
 	methods: string[];
 	aliases?: CommandAlias[];
 	signature: string;
