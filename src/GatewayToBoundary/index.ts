@@ -1,9 +1,10 @@
-import { ContactPayload, Media, Platform } from '../Common';
+import { ContactPayload, Media, Platform, InteractiveButtons } from '../Common';
 
 /**
  * [TODO]: Find a way to tag people
  */
 export type SendMessagePayload = {
+	interactive?: InteractiveButtons;
 	quoteId?: string;
 	chatId: string;
 	body: string;

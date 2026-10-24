@@ -1,11 +1,12 @@
 export * from './instance';
 export * from './ForwardableEvents';
 
-import { ContactID, ContactPayload, Media, Platform } from '../Common';
+import { ContactID, ContactPayload, Media, Platform, InteractiveResponse } from '../Common';
 
 export type MessageType = 'STICKER' | 'TEXT' | 'VIDEO' | 'IMAGE' | 'AUDIO' | 'OTHER';
 
 export type MessageReceived = {
+	interactiveResponse?: InteractiveResponse;
 	platform: Platform;
 	timestamp: number | undefined;
 	from: ContactID;
