@@ -7,6 +7,10 @@ export * from './interactive';
 export type MediaTransportType = 'b64' | 'url';
 
 export type Media = {
+	/** Request original video sound when converting to a sticker; false strips sound. */
+	stickerSound?: boolean;
+	/** Downloaded sound belonging to this sticker (independent encrypted media). */
+	stickerAudio?: Media;
 	data: Base64;
 	fileName: string | null;
 	sizeInBytes: number | null;
